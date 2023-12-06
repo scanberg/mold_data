@@ -1,0 +1,6 @@
+.ccls-cache/
+.vscode/
+gen/
+.vs
+
+*.cache
