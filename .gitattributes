@@ -1,0 +1,6 @@
+# Denote all files as binary to make sure the line endings are not modified
+* binary
+
+# These are the exceptions
+*.txt text
+*.md  text
