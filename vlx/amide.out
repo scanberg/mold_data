@@ -1,0 +1,392 @@
+* Warning * Environment variable OMP_NUM_THREADS not set.
+* Warning * Setting OMP_NUM_THREADS to 32.
+!========================================================================================================================!
+!                                                                                                                        !
+!                                                       VELOXCHEM                                                        !
+!                                              AN ELECTRONIC STRUCTURE CODE                                              !
+!                                                                                                                        !
+!                                     Copyright (C) 2018-2022 VeloxChem developers.                                      !
+!                                                  All rights reserved.                                                  !
+!========================================================================================================================!
+!                                VeloxChem execution started at Wed Feb 28 15:13:19 2024.                                !
+!========================================================================================================================!
+                                                                                                                          
+* Info * Using 32 OpenMP threads per compute node.                                                                        
+                                                                                                                          
+* Info * Reading input file amide.inp...                                                                                  
+                                                                                                                          
+* Info * @jobs                                                                                                            
+* Info * task: response                                                                                                   
+* Info * @end                                                                                                             
+                                                                                                                          
+* Info * @method_settings                                                                                                 
+* Info * xcfun: b3lyp                                                                                                     
+* Info * basis: def2-svp                                                                                                  
+* Info * @end                                                                                                             
+                                                                                                                          
+* Info * @response                                                                                                        
+* Info * property: absorption                                                                                             
+* Info * nstates: 5                                                                                                       
+* Info * nto: yes                                                                                                         
+* Info * @end                                                                                                             
+                                                                                                                          
+                                              Molecular Geometry (Angstroms)                                              
+                                             ================================                                             
+                                                                                                                          
+                          Atom         Coordinate X          Coordinate Y          Coordinate Z                           
+                                                                                                                          
+                           C          -0.011700000000        1.004600000000        0.330400000000                         
+                           O          -1.168100000000        1.372500000000        0.369100000000                         
+                           N           0.301400000000       -0.375500000000        0.129700000000                         
+                           C           1.647300000000       -0.663000000000       -0.411100000000                         
+                           C          -0.748900000000       -1.296400000000       -0.351800000000                         
+                           H           0.838500000000        1.683400000000        0.513500000000                         
+                           H           2.390300000000        0.018800000000        0.023600000000                         
+                           H           1.690300000000       -0.571200000000       -1.506500000000                         
+                           H           1.929700000000       -1.689900000000       -0.143000000000                         
+                           H          -0.425500000000       -2.331100000000       -0.177900000000                         
+                           H          -0.957700000000       -1.172600000000       -1.424300000000                         
+                           H          -1.679700000000       -1.128000000000        0.205200000000                         
+                                                                                                                          
+                          Molecular charge            : 0                                                                 
+                          Spin multiplicity           : 1                                                                 
+                          Number of atoms             : 12                                                                
+                          Number of alpha electrons   : 20                                                                
+                          Number of beta  electrons   : 20                                                                
+                                                                                                                          
+* Info * Reading basis set from file: /home/linares/miniconda3/envs/vlxenv/lib/python3.12/site-packages/veloxchem/basis/DEF2-SVP
+                                                                                                                          
+                                              Molecular Basis (Atomic Basis)                                              
+                                             ================================                                             
+                                                                                                                          
+                               Basis: DEF2-SVP                                                                            
+                                                                                                                          
+                               Atom Contracted GTOs           Primitive GTOs                                              
+                                                                                                                          
+                                O   (3S,2P,1D)                (7S,4P,1D)                                                  
+                                H   (2S,1P)                   (4S,1P)                                                     
+                                C   (3S,2P,1D)                (7S,4P,1D)                                                  
+                                N   (3S,2P,1D)                (7S,4P,1D)                                                  
+                                                                                                                          
+                               Contracted Basis Functions : 105                                                           
+                               Primitive Basis Functions  : 169                                                           
+                                                                                                                          
+                                                                                                                          
+                                            Self Consistent Field Driver Setup                                            
+                                           ====================================                                           
+                                                                                                                          
+                   Wave Function Model             : Spin-Restricted Kohn-Sham                                            
+                   Initial Guess Model             : Restart from Checkpoint                                              
+                   Convergence Accelerator         : Direct Inversion of Iterative Subspace                               
+                   Max. Number of Iterations       : 50                                                                   
+                   Max. Number of Error Vectors    : 10                                                                   
+                   Convergence Threshold           : 1.0e-06                                                              
+                   ERI Screening Scheme            : Cauchy Schwarz + Density                                             
+                   ERI Screening Mode              : Dynamic                                                              
+                   ERI Screening Threshold         : 1.0e-12                                                              
+                   Linear Dependence Threshold     : 1.0e-06                                                              
+                   Exchange-Correlation Functional : B3LYP                                                                
+                   Molecular Grid Level            : 4                                                                    
+                                                                                                                          
+* Info * Nuclear repulsion energy: 179.5403908125 a.u.                                                                    
+                                                                                                                          
+* Info * Using the Libxc library (version 6.2.2).                                                                         
+                                                                                                                          
+         S. Lehtola, C. Steigemann, M. J.T. Oliveira, and M. A.L. Marques.,  SoftwareX 7, 1–5 (2018)
+                                                                                                                          
+* Info * Using the B3LYP functional.                                                                                      
+                                                                                                                          
+         P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch.,  J. Phys. Chem. 98, 11623 (1994)
+                                                                                                                          
+* Info * Molecular grid with 160146 points generated in 0.07 sec.                                                         
+                                                                                                                          
+* Info * Overlap matrix computed in 0.00 sec.                                                                             
+                                                                                                                          
+* Info * Kinetic energy matrix computed in 0.00 sec.                                                                      
+                                                                                                                          
+* Info * Nuclear potential matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+* Info * Restarting from checkpoint file: amide.scf.h5                                                                    
+                                                                                                                          
+                                                                                                                          
+               Iter. |    Kohn-Sham Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
+               --------------------------------------------------------------------------------------------               
+                  1      -248.321716562753    0.0000000000      0.00000063      0.00000003      0.00000000                
+                                                                                                                          
+* Info * Checkpoint written to file: amide.scf.h5                                                                         
+                                                                                                                          
+* Info * SCF tensors written to file: amide.scf.tensors.h5                                                                
+                                                                                                                          
+               *** SCF converged in 1 iterations. Time: 1.29 sec.                                                         
+                                                                                                                          
+               Spin-Restricted Kohn-Sham:                                                                                 
+               --------------------------                                                                                 
+               Total Energy                       :     -248.3217165628 a.u.                                              
+               Electronic Energy                  :     -427.8621073753 a.u.                                              
+               Nuclear Repulsion Energy           :      179.5403908125 a.u.                                              
+               ------------------------------------                                                                       
+               Gradient Norm                      :        0.0000006264 a.u.                                              
+                                                                                                                          
+                                                                                                                          
+               Ground State Information                                                                                   
+               ------------------------                                                                                   
+               Charge of Molecule            :  0.0                                                                       
+               Multiplicity (2S+1)           :  1.0                                                                       
+               Magnetic Quantum Number (M_S) :  0.0                                                                       
+                                                                                                                          
+                                                                                                                          
+                                                 Spin Restricted Orbitals                                                 
+                                                 ------------------------                                                 
+                                                                                                                          
+               Molecular Orbital No.  16:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.40375 a.u.                                                                  
+               (   1 C   1p+1:     0.22) (   2 O   1p+1:    -0.30) (   2 O   2p+1:    -0.16)                              
+               (   4 C   1p-1:    -0.34) (   7 H   1s  :    -0.25) (   9 H   1s  :     0.25)                              
+                                                                                                                          
+               Molecular Orbital No.  17:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.38354 a.u.                                                                  
+               (   3 N   1p+1:     0.21) (   4 C   1p+1:     0.23) (   5 C   1p+1:     0.33)                              
+               (   5 C   1p0 :    -0.16) (   7 H   1s  :     0.18) (  12 H   1s  :    -0.32)                              
+                                                                                                                          
+               Molecular Orbital No.  18:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.37844 a.u.                                                                  
+               (   1 C   1p0 :     0.35) (   1 C   2p0 :     0.20) (   2 O   1p0 :     0.40)                              
+               (   2 O   2p0 :     0.25)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  19:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.26558 a.u.                                                                  
+               (   2 O   1p+1:     0.17) (   2 O   1p-1:     0.52) (   2 O   2p-1:     0.37)                              
+               (   3 N   3s  :     0.31) (   3 N   1p0 :    -0.24) (   3 N   2p0 :     0.18)                              
+               (   6 H   1s  :    -0.19) (   6 H   2s  :    -0.16)                                                        
+                                                                                                                          
+               Molecular Orbital No.  20:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.24383 a.u.                                                                  
+               (   2 O   1p-1:    -0.20) (   2 O   1p0 :    -0.32) (   2 O   2p0 :    -0.24)                              
+               (   3 N   1p-1:     0.21) (   3 N   1p0 :    -0.41) (   3 N   2p-1:    -0.18)                              
+               (   3 N   2p0 :     0.34)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  21:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.00339 a.u.                                                                  
+               (   1 C   3s  :     0.17) (   1 C   1p0 :    -0.49) (   1 C   2p0 :    -0.55)                              
+               (   2 O   1p0 :     0.37) (   2 O   2p0 :     0.41) (   3 N   1p0 :    -0.20)                              
+               (   3 N   2p-1:    -0.16) (   3 N   2p0 :     0.20) (   4 C   3s  :    -0.29)                              
+               (   5 C   3s  :    -0.36) (   8 H   2s  :     0.36) (   9 H   2s  :     0.18)                              
+               (  11 H   2s  :     0.35)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  22:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.05243 a.u.                                                                  
+               (   1 C   3s  :     0.30) (   1 C   2p+1:     0.26) (   1 C   2p-1:     0.20)                              
+               (   4 C   2s  :     0.15) (   4 C   3s  :     1.84) (   4 C   2p+1:     0.41)                              
+               (   5 C   3s  :     1.24) (   5 C   2p-1:    -0.24) (   6 H   2s  :    -0.57)                              
+               (   7 H   2s  :    -0.91) (   8 H   2s  :    -0.80) (   9 H   2s  :    -0.93)                              
+               (  10 H   2s  :    -0.78) (  11 H   2s  :    -0.57) (  12 H   2s  :    -0.36)                              
+                                                                                                                          
+               Molecular Orbital No.  23:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.08437 a.u.                                                                  
+               (   1 C   3s  :     1.00) (   1 C   2p+1:     0.40) (   1 C   2p-1:     0.29)                              
+               (   1 C   2p0 :     0.18) (   3 N   3s  :    -0.35) (   4 C   3s  :     0.63)                              
+               (   4 C   1p-1:     0.19) (   4 C   2p+1:     0.17) (   4 C   2p-1:     0.49)                              
+               (   4 C   2p0 :     0.22) (   5 C   3s  :    -1.28) (   5 C   2p+1:     0.21)                              
+               (   5 C   2p-1:     0.39) (   5 C   2p0 :     0.18) (   6 H   2s  :    -1.23)                              
+               (   7 H   2s  :    -1.05) (   9 H   2s  :     0.30) (  10 H   2s  :     0.86)                              
+               (  11 H   2s  :     0.71) (  12 H   2s  :     0.47)                                                        
+                                                                                                                          
+               Molecular Orbital No.  24:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.10080 a.u.                                                                  
+               (   1 C   3s  :    -0.66) (   1 C   2p+1:    -0.54) (   2 O   3s  :    -0.24)                              
+               (   3 N   3s  :     0.42) (   3 N   2p+1:    -0.34) (   4 C   3s  :     1.82)                              
+               (   4 C   2p0 :    -0.29) (   5 C   2s  :    -0.17) (   5 C   3s  :    -1.85)                              
+               (   5 C   2p+1:    -0.21) (   6 H   2s  :     1.00) (   7 H   2s  :    -0.38)                              
+               (   8 H   2s  :    -1.16) (   9 H   2s  :    -0.83) (  10 H   2s  :     0.89)                              
+               (  11 H   2s  :     0.75) (  12 H   2s  :     0.50)                                                        
+                                                                                                                          
+               Molecular Orbital No.  25:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.10597 a.u.                                                                  
+               (   1 C   3s  :     0.57) (   3 N   2p0 :    -0.20) (   4 C   3s  :    -0.21)                              
+               (   4 C   1p-1:    -0.23) (   4 C   2p-1:    -0.74) (   4 C   2p0 :     0.26)                              
+               (   5 C   3s  :    -0.96) (   5 C   1p+1:     0.16) (   5 C   1p-1:    -0.17)                              
+               (   5 C   2p+1:     0.48) (   5 C   2p-1:    -0.55) (   5 C   2p0 :     0.16)                              
+               (   6 H   2s  :    -0.49) (   7 H   2s  :     0.64) (   8 H   2s  :     0.62)                              
+               (   9 H   2s  :    -1.10) (  10 H   2s  :    -0.68) (  11 H   2s  :     0.88)                              
+               (  12 H   2s  :     1.05)                                                                                  
+                                                                                                                          
+                                                                                                                          
+                                                Ground State Dipole Moment                                                
+                                               ----------------------------                                               
+                                                                                                                          
+                                   X   :         1.019735 a.u.         2.591908 Debye                                     
+                                   Y   :        -0.743154 a.u.        -1.888909 Debye                                     
+                                   Z   :        -0.365420 a.u.        -0.928804 Debye                                     
+                                 Total :         1.313647 a.u.         3.338957 Debye                                     
+                                                                                                                          
+                                                                                                                          
+                                            Linear Response EigenSolver Setup                                             
+                                           ===================================                                            
+                                                                                                                          
+                               Number of States                : 5                                                        
+                               Max. Number of Iterations       : 150                                                      
+                               Convergence Threshold           : 1.0e-04                                                  
+                               ERI Screening Scheme            : Cauchy Schwarz + Density                                 
+                               ERI Screening Threshold         : 1.0e-12                                                  
+                               Exchange-Correlation Functional : B3LYP                                                    
+                               Molecular Grid Level            : 4                                                        
+                                                                                                                          
+* Info * Using the Libxc library (version 6.2.2).                                                                         
+                                                                                                                          
+         S. Lehtola, C. Steigemann, M. J.T. Oliveira, and M. A.L. Marques.,  SoftwareX 7, 1–5 (2018)
+                                                                                                                          
+* Info * Using the B3LYP functional.                                                                                      
+                                                                                                                          
+         P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch.,  J. Phys. Chem. 98, 11623 (1994)
+                                                                                                                          
+* Info * Molecular grid with 160146 points generated in 0.07 sec.                                                         
+                                                                                                                          
+* Info * Restarting from checkpoint file: amide.rsp.h5                                                                    
+                                                                                                                          
+* Info * 37 gerade trial vectors in reduced space                                                                         
+* Info * 37 ungerade trial vectors in reduced space                                                                       
+                                                                                                                          
+* Info * 2.15 MB of memory used for subspace procedure on the master node                                                 
+* Info * 120.48 GB of memory available for the solver on the master node                                                  
+                                                                                                                          
+               *** Iteration:   1 * Residuals (Max,Min): 3.71e-05 and 1.82e-05                                            
+                                                                                                                          
+               Excitation 1   :      0.19249198 Residual Norm: 0.00003532   converged                                     
+               Excitation 2   :      0.23996560 Residual Norm: 0.00003713   converged                                     
+               Excitation 3   :      0.26018494 Residual Norm: 0.00001818   converged                                     
+               Excitation 4   :      0.28879257 Residual Norm: 0.00002031   converged                                     
+               Excitation 5   :      0.29162989 Residual Norm: 0.00002569   converged                                     
+                                                                                                                          
+* Info * Checkpoint written to file: amide.rsp.h5                                                                         
+                                                                                                                          
+* Info * Time spent in writing checkpoint file: 0.00 sec                                                                  
+                                                                                                                          
+               *** Linear response converged in 1 iterations. Time: 0.48 sec                                              
+                                                                                                                          
+                                                                                                                          
+* Info * Running NTO analysis for S1...                                                                                   
+* Info *   lambda: 0.9511                                                                                                 
+* Info *     Cube file (hole)     : amide_S1_NTO_H1.cube                                                                  
+* Info *     Cube file (particle) : amide_S1_NTO_P1.cube                                                                  
+                                                                                                                          
+* Info * Running NTO analysis for S2...                                                                                   
+* Info *   lambda: 0.8371                                                                                                 
+* Info *     Cube file (hole)     : amide_S2_NTO_H1.cube                                                                  
+* Info *     Cube file (particle) : amide_S2_NTO_P1.cube                                                                  
+                                                                                                                          
+* Info * Running NTO analysis for S3...                                                                                   
+* Info *   lambda: 0.9855                                                                                                 
+* Info *     Cube file (hole)     : amide_S3_NTO_H1.cube                                                                  
+* Info *     Cube file (particle) : amide_S3_NTO_P1.cube                                                                  
+                                                                                                                          
+* Info * Running NTO analysis for S4...                                                                                   
+* Info *   lambda: 0.6844                                                                                                 
+* Info *     Cube file (hole)     : amide_S4_NTO_H1.cube                                                                  
+* Info *     Cube file (particle) : amide_S4_NTO_P1.cube                                                                  
+* Info *   lambda: 0.3061                                                                                                 
+* Info *     Cube file (hole)     : amide_S4_NTO_H2.cube                                                                  
+* Info *     Cube file (particle) : amide_S4_NTO_P2.cube                                                                  
+                                                                                                                          
+* Info * Running NTO analysis for S5...                                                                                   
+* Info *   lambda: 0.6904                                                                                                 
+* Info *     Cube file (hole)     : amide_S5_NTO_H1.cube                                                                  
+* Info *     Cube file (particle) : amide_S5_NTO_P1.cube                                                                  
+* Info *   lambda: 0.2804                                                                                                 
+* Info *     Cube file (hole)     : amide_S5_NTO_H2.cube                                                                  
+* Info *     Cube file (particle) : amide_S5_NTO_P2.cube                                                                  
+                                                                                                                          
+                                                                                                                          
+* Info * Response solution vectors written to file: amide.rsp.solutions.h5                                                
+                                                                                                                          
+               Electric Transition Dipole Moments (dipole length, a.u.)                                                   
+               --------------------------------------------------------                                                   
+                                                X            Y            Z                                               
+               Excited State    S1:      0.037138    -0.160898    -0.159099                                               
+               Excited State    S2:     -0.351391     0.797258     0.432110                                               
+               Excited State    S3:      0.056309    -0.335779     0.224962                                               
+               Excited State    S4:     -0.084978     0.014701     0.020595                                               
+               Excited State    S5:      0.381746    -0.198687     0.134142                                               
+                                                                                                                          
+               Electric Transition Dipole Moments (dipole velocity, a.u.)                                                 
+               ----------------------------------------------------------                                                 
+                                                X            Y            Z                                               
+               Excited State    S1:      0.035201    -0.136169    -0.170296                                               
+               Excited State    S2:     -0.320026     0.751285     0.438310                                               
+               Excited State    S3:      0.051535    -0.314624     0.234439                                               
+               Excited State    S4:     -0.097458     0.009437     0.016390                                               
+               Excited State    S5:      0.376886    -0.183217     0.119449                                               
+                                                                                                                          
+               Magnetic Transition Dipole Moments (a.u.)                                                                  
+               -----------------------------------------                                                                  
+                                                X            Y            Z                                               
+               Excited State    S1:     -0.460815     0.171547    -0.008106                                               
+               Excited State    S2:     -0.286614    -0.003841     0.137271                                               
+               Excited State    S3:     -0.164368    -0.090648    -0.058485                                               
+               Excited State    S4:     -0.104074     0.104622    -0.083805                                               
+               Excited State    S5:     -0.118838     0.067793    -0.081475                                               
+                                                                                                                          
+               One-Photon Absorption                                                                                      
+               ---------------------                                                                                      
+               Excited State    S1:      0.19249198 a.u.      5.23797 eV    Osc.Str.    0.0067                            
+               Excited State    S2:      0.23996560 a.u.      6.52980 eV    Osc.Str.    0.1513                            
+               Excited State    S3:      0.26018494 a.u.      7.07999 eV    Osc.Str.    0.0289                            
+               Excited State    S4:      0.28879257 a.u.      7.85845 eV    Osc.Str.    0.0015                            
+               Excited State    S5:      0.29162989 a.u.      7.93565 eV    Osc.Str.    0.0395                            
+                                                                                                                          
+               Electronic Circular Dichroism                                                                              
+               -----------------------------                                                                              
+               Excited State    S1:     Rot.Str.     -0.038200 a.u.   -18.0093 [10**(-40) cgs]                            
+               Excited State    S2:     Rot.Str.      0.149006 a.u.    70.2477 [10**(-40) cgs]                            
+               Excited State    S3:     Rot.Str.      0.006338 a.u.     2.9880 [10**(-40) cgs]                            
+               Excited State    S4:     Rot.Str.      0.009757 a.u.     4.5997 [10**(-40) cgs]                            
+               Excited State    S5:     Rot.Str.     -0.066941 a.u.   -31.5590 [10**(-40) cgs]                            
+                                                                                                                          
+               Character of excitations:                                                                                  
+                                                                                                                          
+               Excited state 1                                                                                            
+               ---------------                                                                                            
+               HOMO-1   -> LUMO         0.7769                                                                            
+               HOMO     -> LUMO        -0.6196                                                                            
+                                                                                                                          
+               Excited state 2                                                                                            
+               ---------------                                                                                            
+               HOMO     -> LUMO         0.7538                                                                            
+               HOMO-1   -> LUMO         0.6070                                                                            
+                                                                                                                          
+               Excited state 3                                                                                            
+               ---------------                                                                                            
+               HOMO     -> LUMO+1      -0.9903                                                                            
+                                                                                                                          
+               Excited state 4                                                                                            
+               ---------------                                                                                            
+               HOMO-1   -> LUMO+1       0.8243                                                                            
+               HOMO     -> LUMO+2       0.5391                                                                            
+                                                                                                                          
+               Excited state 5                                                                                            
+               ---------------                                                                                            
+               HOMO     -> LUMO+2       0.8211                                                                            
+               HOMO-1   -> LUMO+1      -0.5255                                                                            
+                                                                                                                          
+!========================================================================================================================!
+!                               VeloxChem execution completed at Wed Feb 28 15:13:34 2024.                               !
+!========================================================================================================================!
+!                                           Total execution time is 15.71 sec.                                           !
+!========================================================================================================================!
+!                     Rinkevicius, Z.; Li, X.; Vahtras, O.; Ahmadzadeh, K.; Brand, M.; Ringholm, M.;                     !
+!                              List, N. H.; Scheurer, M.; Scott, M.; Dreuw, A.; Norman, P.                               !
+!                     VeloxChem: A Python-driven Density-functional Theory Program for Spectroscopy                      !
+!                                Simulations in High-performance Computing Environments.                                 !
+!                                       WIREs Comput Mol Sci 2020, 10 (5), e1457.                                        !
+!========================================================================================================================!
