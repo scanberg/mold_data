@@ -1,0 +1,27 @@
+@jobs
+task: response
+@end
+
+@method settings
+xcfun: b3lyp
+basis: def2-svp
+@end
+
+@response
+property: absorption
+nstates: 1
+nto: yes
+nto_cubes: yes
+@end
+
+@molecule
+charge: 0
+multiplicity: 1
+xyz:
+O          0.00000        0.00000        0.11779
+H          0.00000        0.75545       -0.47116
+H          0.00000       -0.75545       -0.47116
+@end
+
+
+
