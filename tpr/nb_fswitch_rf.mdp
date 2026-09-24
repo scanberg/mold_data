@@ -1,0 +1,13 @@
+integrator = md
+nsteps = 0
+cutoff-scheme = Verlet
+vdwtype = cut-off
+vdw-modifier = force-switch
+rvdw-switch = 0.8
+rvdw = 1.2
+coulombtype = reaction-field
+rcoulomb = 1.2
+epsilon-r = 2
+epsilon-rf = 78
+DispCorr = EnerPres
+energygrps = CHN SOL

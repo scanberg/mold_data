@@ -1,0 +1,12 @@
+integrator = md
+nsteps = 0
+cutoff-scheme = Verlet
+vdwtype = PME
+rvdw = 1.1
+lj-pme-comb-rule = Lorentz-Berthelot
+coulombtype = PME
+rcoulomb = 1.1
+ewald-rtol = 1e-6
+ewald-rtol-lj = 1e-4
+DispCorr = No
+energygrps = CHN SOL

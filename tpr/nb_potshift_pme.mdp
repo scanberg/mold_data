@@ -1,0 +1,10 @@
+integrator = md
+nsteps = 0
+cutoff-scheme = Verlet
+vdwtype = cut-off
+vdw-modifier = potential-shift
+rvdw = 1.1
+coulombtype = PME
+rcoulomb = 1.1
+DispCorr = No
+energygrps = CHN SOL

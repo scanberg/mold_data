@@ -28,3 +28,21 @@ and with -water tip4p / -cs tip4p.gro for the TIP4P one.
                               github.com/marrink-lab/martini-forcefields. No particle has an atomic
                               number, one (Trp SC3) is a virtual site with Lennard-Jones interactions.
     martini3.gro              gmx editconf -f martini3.tpr -o martini3.gro
+
+    nb_fswitch_rf.tpr         A small charged Lennard-Jones test system (nb_topol.top, nb_conf.gro,
+    nb_pswitch_cut.tpr        nb_index.ndx) for the non-bonded settings, exclusions and pair
+    nb_ljpme.tpr              potentials, one per .mdp of the same name: force-switch + reaction
+    nb_potshift_pme.tpr       field + dispersion correction, potential-switch + plain cut-off
+                              Coulomb, LJ-PME + PME, and potential-shift + PME. Two types with a
+                              [ nonbond_params ] override of their pair; three five atom chains
+                              (charges +-0.2, nrexcl 2 and an explicit [ exclusions ] 1 4), then
+                              two +0.3 and two -0.3 single atom molecules, placed at random in a
+                              2.8 nm box. Written by GROMACS 2023.3 (tpx 129):
+
+    gmx grompp -f nb_X.mdp -c nb_conf.gro -p nb_topol.top -n nb_index.ndx -o nb_X.tpr -maxwarn 5
+
+The expected simulation parameters in the tests are what `gmx dump -s` prints for each file. The
+expected energies (test_nonbonded.c) are GROMACS' own, per energy group (CHN, SOL of nb_index.ndx):
+
+    gmx mdrun -s nb_X.tpr -rerun nb_conf.gro -nb cpu -ntmpi 1 -ntomp 1
+    gmx energy -dp    (LJ-SR and Coul-SR of CHN-CHN, CHN-SOL, SOL-SOL)

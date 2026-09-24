@@ -1,0 +1,12 @@
+integrator = md
+nsteps = 0
+cutoff-scheme = Verlet
+vdwtype = cut-off
+vdw-modifier = potential-switch
+rvdw-switch = 0.9
+rvdw = 1.0
+coulombtype = cut-off
+coulomb-modifier = None
+rcoulomb = 1.0
+DispCorr = No
+energygrps = CHN SOL

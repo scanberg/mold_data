@@ -1,0 +1,54 @@
+; Test topology for the tpr reader: two Lennard-Jones types with an explicit [ nonbond_params ] override,
+; generated exclusions (nrexcl) plus an explicit [ exclusions ] entry. Charged, so Coulomb is tested too.
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+  1       2         no        1.0     0.5
+
+[ atomtypes ]
+; name  mass   charge ptype sigma  epsilon
+  A     20.0   0.0    A     0.30   0.50
+  B     30.0   0.0    A     0.40   1.00
+
+[ nonbond_params ]
+; i j func sigma epsilon
+  A B 1    0.25  2.00
+
+[ moleculetype ]
+CHAIN 2
+
+[ atoms ]
+; nr type resnr res atom cgnr charge mass
+  1  A    1     CHN C1   1    0.2
+  2  B    1     CHN C2   2   -0.2
+  3  A    1     CHN C3   3    0.2
+  4  B    1     CHN C4   4   -0.2
+  5  A    1     CHN C5   5    0.0
+
+[ bonds ]
+  1 2 1 0.35 5000
+  2 3 1 0.35 5000
+  3 4 1 0.35 5000
+  4 5 1 0.35 5000
+
+[ exclusions ]
+  1 4
+
+[ moleculetype ]
+SOLP 1
+
+[ atoms ]
+  1  B    1     SOP S1   1    0.3
+
+[ moleculetype ]
+SOLN 1
+
+[ atoms ]
+  1  A    1     SON S1   1   -0.3
+
+[ system ]
+nonbonded test
+
+[ molecules ]
+CHAIN 3
+SOLP  2
+SOLN  2
