@@ -22,7 +22,7 @@ cool1 = not element("O") in resname("GLY");
 cool2 = (not element("O")) in resname("GLY"); # should be same as cool1
 cool3 = not (element("O") in resname("GLY"));
 
-cho1 = resname("GLY") in chain(1:10);
+cho1 = resname("GLY") in polymer(1:10);
 
 arr0 = {vec4(1,0,0,0), vec4(1,0,0,0), vec4(1,0,0,0)};
 
@@ -114,8 +114,8 @@ rdf1 = rdf(resname("PFT") and element('C'), element('O'), 20.0); # RETURNS distr
 rdf2 = rdf(com(element('C')) in resname("PFT"), element('O'), 20.0); # RETURNS distribution[M] where M is the number of residues named PFT
 
 # Spatial distribution function: This is the operation we did in the article expressed in this syntax
-# Match all chains
-sdf1 = sdf(chain(:), resname("PFT"), 30.0);
+# Match all strands of the polymers
+sdf1 = sdf(polymer(:), resname("PFT"), 30.0);
 
 # Should replicate the operation used in the article.
 sdf2 = sdf(resname("PFT"), element("O"), 20.0);
