@@ -46,6 +46,18 @@ Nothing else was touched. It is what
 `molden.sp_shells_expand_to_s_and_p` compares against, and the two must produce the same basis and
 the same orbitals.
 
+## he_ccpvdz.molden, oh_631gs_uhf.molden
+
+Written by **PySCF 2.14** for the electron localization function tests in `unittest/test_gto_iso.c`
+(`qm_elf.*`). Helium, cc-pVDZ, restricted Hartree-Fock: one occupied orbital, so ELF is exactly 1 wherever
+there is density. The OH radical (O at the origin, H at z = 1.84 bohr), 6-31G*, unrestricted Hartree-Fock,
+`Spin= Beta` orbitals of its own: the open shell. Spherical d, written `[5D]`: PySCF's Cartesian Molden files
+normalise each Cartesian function on its own, which is not the `[6D]` normalisation this reader takes (above),
+and read here they give densities off by up to 2% wherever d functions are occupied.
+
+The ELF and LOL values the test holds for the radical come from PySCF itself (`pyscf.dft.numint`, its own AO
+evaluation) of this file, not from this library.
+
 ## What is not here
 
 The vibrational fixture for `[FREQ]`, `[INT]` and `[FR-NORM-COORD]` is written into
