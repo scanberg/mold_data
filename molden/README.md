@@ -15,7 +15,13 @@ through the reader have to be exercised:
 
 - `h2o_ccpvdz.molden` is `[5D]` — five spherical d functions, which is what ORCA actually computed.
 - `h2o_ccpvdz_6d.molden` is `[6D]` — the same wavefunction re-expressed over six Cartesian d
-  functions, in Molden's Cartesian ordering and with the normalisation a `[6D]` writer uses.
+  functions, in Molden's Cartesian ordering, each Cartesian function normalised on its own, as the
+  format has them (Molden itself, PySCF, IOData). It was first written with the xy, xz and yz
+  coefficients against functions sharing the xx normalisation - a convention some programs write
+  (Turbomole, CFOUR 2.1, PSI4 <= 1.3.2, which IOData corrects on reading) and the reader then assumed,
+  so the two agreed with each other and not with the format: PySCF read it as 10.008 electrons, with
+  orbitals 1.7 from orthonormal. Restated by multiplying those coefficients by 1/sqrt(3); PySCF now
+  reads it as the 5D file's wavefunction to 1e-15 in the density.
 
 Converting rather than downloading a second file is deliberate: it makes
 `trexio.agrees_with_the_same_calculation_in_molden` a real cross check. The two readers share
@@ -51,12 +57,17 @@ the same orbitals.
 Written by **PySCF 2.14** for the electron localization function tests in `unittest/test_gto_iso.c`
 (`qm_elf.*`). Helium, cc-pVDZ, restricted Hartree-Fock: one occupied orbital, so ELF is exactly 1 wherever
 there is density. The OH radical (O at the origin, H at z = 1.84 bohr), 6-31G*, unrestricted Hartree-Fock,
-`Spin= Beta` orbitals of its own: the open shell. Spherical d, written `[5D]`: PySCF's Cartesian Molden files
-normalise each Cartesian function on its own, which is not the `[6D]` normalisation this reader takes (above),
-and read here they give densities off by up to 2% wherever d functions are occupied.
+`Spin= Beta` orbitals of its own: the open shell. Spherical d, written `[5D]`.
 
 The ELF and LOL values the test holds for the radical come from PySCF itself (`pyscf.dft.numint`, its own AO
 evaluation) of this file, not from this library.
+
+## h2o_ccpvqz_cart.molden
+
+Water, cc-pVQZ, restricted Hartree-Fock, Cartesian `[6D10F15G]`, written by **PySCF 2.14**, with the five
+occupied orbitals only. Their small f and g components are what make it a test of the Cartesian
+normalisation and order of all three: read with the d, f or g functions normalised any other way, the
+orbitals are not orthonormal. PySCF reads it as ten electrons, orthonormal to 2e-14.
 
 ## What is not here
 
