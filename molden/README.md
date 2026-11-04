@@ -69,6 +69,19 @@ occupied orbitals only. Their small f and g components are what make it a test o
 normalisation and order of all three: read with the d, f or g functions normalised any other way, the
 orbitals are not orthonormal. PySCF reads it as ten electrons, orthonormal to 2e-14.
 
+## h2o_ccpvdz_6d_shell.molden, h2o_ccpvqz_cart_shell.molden
+
+The two Cartesian files above with their Cartesian functions normalised as a shell: every function of a
+shell with the constant of its (l,0,0) monomial, so xy is sqrt(3) smaller than xx, as Turbomole, CFOUR 2.1
+and PSI4 <= 1.3.2 write them (IOData corrects those on reading). Nothing else differs: each coefficient of
+a function that is not a power of one coordinate is divided by sqrt((2i-1)!!(2j-1)!!(2k-1)!! / (2l-1)!!).
+`h2o_ccpvdz_6d_shell.molden` is the `[6D]` water as it was first written; `h2o_ccpvqz_cart_shell.molden`
+was made from `h2o_ccpvqz_cart.molden`, over d, f and g.
+
+The reader is to tell the two conventions apart by the orbitals, which are orthonormal in only one of them,
+and read each pair to one density (`molden.cartesian_normalisation_is_read_from_the_orbitals`). PySCF,
+which takes the format's convention for every file, reads these two as 10.008 and 10.365 electrons.
+
 ## What is not here
 
 The vibrational fixture for `[FREQ]`, `[INT]` and `[FR-NORM-COORD]` is written into
